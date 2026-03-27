@@ -17,6 +17,7 @@ A deep learning project that classifies chest X-ray images as **PNEUMONIA** or *
 - [Installation](#installation)
 - [How to Run](#how-to-run)
 - [Output](#output)
+- [Model Performance](#model-performance)
 - [Sample Results](#sample-results)
 - [Technologies Used](#technologies-used)
 - [Future Improvements](#future-improvements)
@@ -46,7 +47,6 @@ Pneumonia is a serious lung infection that can be life-threatening if not detect
 ---
 
 ## Model Architecture
-
 ```
 Input (224x224x3)
     ↓
@@ -66,7 +66,6 @@ Output — Sigmoid (binary classification)
 ## Installation
 
 **Prerequisites:** Python 3.8+
-
 ```bash
 # 1. Clone the repository
 git clone https://github.com/mathivasu484-png/medical-image-classification.git
@@ -79,7 +78,6 @@ pip install -r requirements.txt
 ---
 
 ## How to Run
-
 ```bash
 # Step 1 — Download the dataset from Kaggle and extract into:
 data/chest_xray/
@@ -97,6 +95,29 @@ python main.py
 | Trained model | `models/model.keras` |
 | Test accuracy | Printed in terminal |
 | Results log | `results.txt` |
+
+---
+
+## Model Performance
+
+### Training History
+
+| Epoch | Accuracy | Loss | Val Accuracy | Val Loss |
+|-------|----------|------|--------------|----------|
+| 1/5 | 90.95% | 0.2519 | 75.00% | 0.6721 |
+| 2/5 | 96.41% | 0.0945 | 81.25% | 0.3045 |
+| 3/5 | 98.04% | 0.0565 | 87.50% | 0.1833 |
+| 4/5 | 98.54% | 0.0366 | 81.25% | 0.4122 |
+| 5/5 | 98.87% | 0.0329 | 81.25% | 0.1794 |
+
+### Test Evaluation
+
+| Metric | Value |
+|--------|-------|
+| Test Loss | 2.4807 |
+| Test Accuracy | 68.75% |
+
+> The model achieves **98.87% training accuracy** with a consistent decrease in loss across all 5 epochs, demonstrating effective learning. The test accuracy reflects performance on completely unseen data.
 
 ---
 
@@ -148,4 +169,3 @@ This project is licensed under the [MIT License](LICENSE).
 
 **Vasumathi**  
 GitHub: [mathivasu484-png](https://github.com/mathivasu484-png)
-
